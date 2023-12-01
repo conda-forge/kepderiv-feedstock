@@ -1,5 +1,5 @@
 {% set name = "kepderiv" %}
-{% set version = "1.0.4" %}
+{% set version = "1.0.5" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/kepderiv-{{ version }}.tar.gz
-  sha256: 1859aa85fa2f8fb0ca7b8b16ff6a47a98824f0f28f1de2cdfbc24393f759ca91
+  sha256: fc70b581ad7238a950d00c0ff1bf0aa70cb1a56b9e72749fda4a8b48cc92e9de
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py2k]
   script: {{ PYTHON }} -m pip install . -vv
 
