@@ -1,7 +1,6 @@
 {% set name = "kepderiv" %}
 {% set version = "1.0.6" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -11,23 +10,22 @@ source:
   sha256: 70eca9c4bc433a207280d0f45fc8790769444375bd4529e9db53dbabaad3b34e
 
 build:
+  skip: true  # [py<38]
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
-  skip: true  # [py2k]
-  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
+    - python >=3.8
+    - setuptools >=61.0
+    - wheel
+    - setuptools-scm
     - numpy
     - pip
-    - python
   run:
-    - numpy >=1.16
-    - python
+    - python >=3.8
     - {{ pin_compatible('numpy') }}
 
 test:
@@ -39,10 +37,9 @@ test:
     - pip
 
 about:
-  home: https://gitlab.unige.ch/jean-baptiste.delisle/kepderiv
-  summary: Keplerian modeling and derivatives for radial velocities analysis.
-  license: GPL-3.0-or-later
-  license_file: COPYING
+  summary: Keplerian modeling and derivatives for radial velocities and astrometry analyses.
+  license: EUPL-1.2
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
