@@ -5,9 +5,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/kepderiv-feedst
 
 Home: https://gitlab.unige.ch/jean-baptiste.delisle/kepderiv
 
-Package license: GPL-3.0-or-later
+Package license: EUPL-1.2
 
-Summary: Keplerian modeling and derivatives for radial velocities analysis.
+Summary: Keplerian modeling and derivatives for radial velocities and astrometry analyses.
 
 Current build status
 ====================
