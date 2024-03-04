@@ -16,16 +16,19 @@ build:
 
 requirements:
   build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
-    - python >=3.8
+    - python
     - setuptools >=61.0
     - wheel
     - setuptools-scm
     - numpy
     - pip
   run:
-    - python >=3.8
+    - python
     - {{ pin_compatible('numpy') }}
 
 test:
@@ -37,6 +40,7 @@ test:
     - pip
 
 about:
+  home: https://gitlab.unige.ch/delisle/kepderiv
   summary: Keplerian modeling and derivatives for radial velocities and astrometry analyses.
   license: EUPL-1.2
   license_file: LICENSE
