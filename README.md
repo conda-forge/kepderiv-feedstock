@@ -3,7 +3,7 @@ About kepderiv-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/kepderiv-feedstock/blob/main/LICENSE.txt)
 
-Home: https://gitlab.unige.ch/jean-baptiste.delisle/kepderiv
+Home: https://gitlab.unige.ch/delisle/kepderiv
 
 Package license: EUPL-1.2
 
