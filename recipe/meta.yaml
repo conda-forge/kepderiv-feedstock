@@ -29,6 +29,7 @@ requirements:
     - numpy
     - pip
   run:
+    - numpy >=1.19
     - python
 
 test:
