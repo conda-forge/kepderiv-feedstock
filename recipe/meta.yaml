@@ -1,5 +1,5 @@
 {% set name = "kepderiv" %}
-{% set version = "1.0.9" %}
+{% set version = "1.0.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/kepderiv-{{ version }}.tar.gz
-  sha256: 60ffd114077814014d895efd7f266c5a1628b1cff2fa4908df8dba63005fb795
+  sha256: 0f2c8a77272243ee8b59c9f4e4bed12b71287e72fb659456ab93a39f016e1c4d
 
 build:
   skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   build:
